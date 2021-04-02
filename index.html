@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"0 content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script defer src="face-api.min.js"></script>
+	<script defer src="script.js"></script>
+	<title>face filter</title>
+		<style>
+		 body{
+		 	margin :0;
+		 	padding: 0;
+		 	width: 100vw;
+		 	height: :100vh;
+		 	display: flex;
+		 	justify-content: center;
+		 	align-items: center;
+		 }
+
+		  canvas {
+      	position: absolute;
+    		}
+    	#html5{
+    		display: none; 
+    		 /*position: absolute;*/
+    	}
+    	.grid-container { position:absolute;
+		  display: grid;
+		  grid-template-columns: auto auto auto auto auto auto;
+		  background-color: #2196F3;
+		  padding: 5px; 
+			}
+		.grid-item { 
+		  background-color: rgba(255, 255, 255, 0.8);
+		  border: 1px solid rgba(0, 0, 0, 0.8);
+		  padding: 20px;
+		  font-size: 30px;
+		  text-align: center;
+		}
+		.grid-item img{
+			width: 10vw;
+			height: 10vh;
+		}
+
+		</style>
+
+
+</head>
+<body>
+<div class="grid-container" style="position: absolute;top:500px">
+  <div class="grid-item" onclick="choosePic('facemoji',50,30)"><img id="facemoji" src="facemoji.png" /></div>
+  <div class="grid-item" onclick="choosePic('animalcrossing',50,-10)"><img id="animalcrossing" src="animalcrossing.png" /></div>
+  <div class="grid-item" onclick="choosePic('joy',40,15)"><img id="joy" src="joy.png" /></div>  
+  <div class="grid-item" onclick="choosePic('thug',50,0)"><img id="thug" src="thug.png" /></div>
+  <div class="grid-item" onclick="choosePic('xmas',40,-120)"><img id="xmas" src="xmas.png" /></div>
+  <div class="grid-item" onclick="choosePic('heart',50,30)"><img id="heart" src="heart.png" /></div>   
+</div>
+	<div id="corps">
+	 <video  id="video" width="720" height="560" autoplay muted></video>
+	
+</div>
+</body>
+</html>
+
+
+
