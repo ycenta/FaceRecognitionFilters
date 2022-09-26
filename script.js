@@ -19,7 +19,8 @@ function startVideo() {
   )
 }
 
-function choosePic(pic_id, correction_x, correction_y){
+
+function choosePic(pic_id, correction_x, correction_y){	//Ajout d'arguments pour corriger manuellement le decalage Hauteur/longueur des pixels
   image.style.border = "";
   image  = document.getElementById(pic_id);
   image.style.border = "thick solid #0000FF";
@@ -45,7 +46,6 @@ video.addEventListener('play', () => {
     
 
         if (typeof detections !== 'undefined') {
-    // the variable is defined
           var box_height = detections["0"]["detection"]["_box"].height
           var box_width = detections["0"]["detection"]["_box"].width
           var box_x = detections["0"]["detection"]["_box"].x
